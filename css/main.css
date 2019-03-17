@@ -24,7 +24,7 @@ html {
 body {
   box-sizing: border-box;
   max-width: 100vw;
-  height: 97vh;
+  height: 96.5vh;
   font-family: 'Ubuntu', sans-serif; }
   @media only screen and (max-height: 800px) {
     body {
@@ -125,8 +125,8 @@ body {
   display: flex;
   justify-content: space-evenly; }
   .menu__start, .menu__projekty, .menu__kontakt {
-    align-self: center;
     font-family: 'Margarine', cursive;
+    align-self: center;
     font-size: 3rem;
     letter-spacing: .4rem;
     cursor: pointer;
@@ -160,11 +160,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    .section__article-start {
+    .section__article-start, .section__article-prace, .section__article-kontakt {
+      display: none;
       margin: 2rem auto;
       width: 90%;
       height: 100%; }
-      .section__article-start-h2 {
+      .section__article-start-h2, .section__article-prace-h2, .section__article-kontakt-h2 {
         font-family: 'Margarine', cursive;
         font-size: 2.8rem;
         margin-left: 5%;
@@ -172,14 +173,26 @@ body {
         font-style: italic;
         padding: .5rem;
         margin-bottom: 2%; }
-      .section__article-start-text {
+      .section__article-start-text, .section__article-prace-text, .section__article-kontakt-text {
         font-size: 1.8rem;
         line-height: 1.8;
         letter-spacing: .2rem;
         margin: 0 auto;
         color: #383535;
         text-indent: 5%; }
+    .section__article-li {
+      list-style: none;
+      line-height: 2.5;
+      font-size: 1.6rem;
+      color: #383535;
+      cursor: pointer;
+      letter-spacing: .3rem; }
+      .section__article-li:hover {
+        text-shadow: 1px 1px brown; }
   .section__span {
     display: block;
     text-align: right;
     padding: 1rem; }
+
+.active2 {
+  display: block; }
