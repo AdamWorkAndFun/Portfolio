@@ -17,10 +17,13 @@ html {
   @media only screen and (max-width: 500px) {
     html {
       font-size: 30%; } }
+  @media only screen and (max-width: 300px) {
+    html {
+      font-size: 20%; } }
 
 body {
   box-sizing: border-box;
-  width: 100vw;
+  max-width: 100vw;
   height: 97vh;
   font-family: 'Ubuntu', sans-serif; }
   @media only screen and (max-height: 800px) {
@@ -34,9 +37,9 @@ body {
   background-image: linear-gradient(to left top, rgba(243, 116, 116, 0.514), rgba(189, 233, 167, 0.384));
   display: flex;
   flex-direction: column; }
-  @media only screen and (max-height: 800px) {
+  @media only screen and (max-height: 450px) {
     .container {
-      min-height: 100%; } }
+      min-height: 150%; } }
 
 .active {
   background-color: #fff;
@@ -66,19 +69,18 @@ body {
 .header {
   height: 40%;
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
   margin-top: 4rem;
-  background-image: url(../img/zdj.jpg);
-  background-size: cover;
-  background-position: top;
-  display: flex;
-  justify-content: center;
   border-radius: .3rem;
   transform: skew(-10deg) rotate(-2deg);
   box-shadow: 2rem 2rem 2rem white;
   outline: 0.2rem solid rgba(131, 6, 6, 0.699);
   outline-offset: .3rem;
-  overflow: hidden; }
+  background-image: url(../img/zdj.jpg);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center; }
   @media only screen and (max-height: 800px) {
     .header {
       height: 30%; } }
@@ -88,11 +90,11 @@ body {
   .header__logo {
     align-self: center;
     height: 100%;
-    display: flex;
-    justify-content: center;
     transform: skewX(-30deg) rotate(-5deg);
     border-radius: .3rem;
-    outline-offset: .5rem; }
+    outline-offset: .5rem;
+    display: flex;
+    justify-content: center; }
     .header__logo-h1 {
       font-family: 'Margarine', cursive;
       align-self: center;
@@ -142,28 +144,33 @@ body {
       border-radius: 1rem; }
 
 .section {
-  width: 100%;
-  min-height: 60%; }
+  flex-basis: 50%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem; }
   @media only screen and (max-height: 800px) {
     .section {
       min-height: 40%; } }
   .section__article {
-    width: 80%;
-    min-height: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 1rem; }
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
     .section__article-start {
       margin: 2rem auto;
       width: 90%;
       height: 100%; }
       .section__article-start-h2 {
+        font-family: 'Margarine', cursive;
         font-size: 2.8rem;
         margin-left: 5%;
         letter-spacing: .7rem;
         font-style: italic;
         padding: .5rem;
-        font-family: 'Margarine', cursive;
         margin-bottom: 2%; }
       .section__article-start-text {
         font-size: 1.8rem;
